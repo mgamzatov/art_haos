@@ -1,0 +1,13 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/test_text"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:background="#ebffffff"
+          android:orientation="vertical"
+          android:padding="6dp"
+          android:text="Серге́й Васи́льевич Рахма́нинов — русский композитор, пианист, дирижёр.
+Родился: 1 апреля 1873 г., Старорусский уезд
+Умер: 28 марта 1943 г., Беверли-Хиллз, Калифорния, США"
+          android:textAlignment="center" />

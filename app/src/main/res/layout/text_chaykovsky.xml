@@ -1,0 +1,13 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/text_chaykovsky"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:background="#ebffffff"
+          android:orientation="vertical"
+          android:padding="6dp"
+          android:text="Пётр Ильи́ч Чайко́вский — русский композитор, педагог, дирижёр и музыкальный критик.
+Родился: 7 мая 1840 г., Воткинск.
+Умер: 6 ноября 1893 г., Санкт-Петербург."
+          android:textAlignment="center" />
