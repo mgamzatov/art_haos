@@ -120,6 +120,8 @@ class MainActivity : AppCompatActivity() {
                             val first_name = user.first_name
                             val bdate = user.bdate;
                             userId = user.id;
+
+                            makePost(":|");
                         }
                     })
 
