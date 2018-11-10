@@ -36,6 +36,13 @@ class MoreActivity : AppCompatActivity() {
             val intent = Intent(this, ConcertActivity::class.java)
             startActivity(intent, null)
         }
+
+        quizBtn.setOnClickListener {
+            val intent = Intent(this, QuizActivity::class.java)
+            startActivity(intent, null)
+        }
+
+
     }
 
     override fun onDestroy() {

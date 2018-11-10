@@ -40,6 +40,12 @@
                 android:theme="@style/VK.Transparent"/>
         <activity android:name=".ConcertActivity">
         </activity>
+        <activity android:name=".QuizActivity">
+        </activity>
+        <activity android:name=".QuizResultActivity">
+        </activity>
+        <activity android:name=".WinQuizResultActivity">
+        </activity>
     </application>
 
 </manifest>

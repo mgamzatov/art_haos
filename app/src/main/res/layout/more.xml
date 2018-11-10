@@ -187,8 +187,9 @@
     </HorizontalScrollView>
 
     <Button
+            android:id="@+id/quizBtn"
             android:layout_marginTop="20dp"
-            android:text="викторина"
+            android:text="выйграй приз!"
             android:layout_width="320dp"
             android:layout_height="89dp"
             android:layout_gravity="center"
