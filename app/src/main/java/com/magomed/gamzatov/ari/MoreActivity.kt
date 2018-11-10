@@ -1,9 +1,11 @@
 package com.magomed.gamzatov.ari
 
+import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.ImageButton
+import kotlinx.android.synthetic.main.more.*
 
 class MoreActivity : AppCompatActivity() {
 
@@ -28,6 +30,11 @@ class MoreActivity : AppCompatActivity() {
                 mp.seekTo(position)
                 mp.start()
             }
+        }
+
+        conc1.setOnClickListener {
+            val intent = Intent(this, ConcertActivity::class.java)
+            startActivity(intent, null)
         }
     }
 

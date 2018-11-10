@@ -48,14 +48,14 @@ class AugmentedImageNode(private val context: Context, layout: Int) : AnchorNode
 
             // Make the 4 corner nodes.
             val node = Node()
-            val pose = Pose.makeTranslation(0.0f, 0.0f, 0.5f)
+            val pose = Pose.makeTranslation(0.0f, 0.0f, 0.1f)
 
             node.setParent(this)
-            node.localPosition = Vector3(pose.tx(), pose.ty(), pose.tz() * image!!.extentZ)
+            node.localPosition = Vector3(pose.tx(), pose.ty(), pose.tz())
             node.localRotation = Quaternion(pose.qx() - 1f, pose.qy(), pose.qz(), pose.qw())
             val renderable = text?.getNow(null)
             renderable?.setSizer {
-                    Vector3(image.extentX, image.extentZ / 2.2f, 0f)
+                    Vector3(image!!.extentX, image.extentZ / 2.2f, 0f)
             }
             node.renderable = renderable
 

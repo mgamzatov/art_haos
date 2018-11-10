@@ -3,7 +3,7 @@
           package="com.magomed.gamzatov.ari">
 
     <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <!--
          This tag indicates that this application requires ARCore.  This results in the application
          only being visible in the Google Play Store on devices that support ARCore.
@@ -34,7 +34,12 @@
 
         <activity android:name=".MoreActivity">
         </activity>
-        <activity android:name="com.vk.sdk.VKServiceActivity" android:label="ServiceActivity" android:theme="@style/VK.Transparent" />
+        <activity
+                android:name="com.vk.sdk.VKServiceActivity"
+                android:label="ServiceActivity"
+                android:theme="@style/VK.Transparent"/>
+        <activity android:name=".ConcertActivity">
+        </activity>
     </application>
 
 </manifest>
