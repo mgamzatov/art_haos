@@ -20,14 +20,21 @@ import com.vk.sdk.api.VKRequest
 import com.vk.sdk.api.VKResponse
 import com.vk.sdk.api.VKRequest.VKRequestListener
 import com.vk.sdk.api.model.*
+import com.vk.sdk.api.model.VKWallPostResult
+import com.vk.sdk.api.VKApiConst
+import com.vk.sdk.api.VKParameters
+import com.vk.sdk.api.model.VKAttachments
+
+
 
 
 class MainActivity : AppCompatActivity() {
 
     private val sMyScope =
 //        arrayOf(VKScope.FRIENDS, VKScope.WALL, VKScope.PHOTOS, VKScope.NOHTTPS, VKScope.MESSAGES, VKScope.DOCS)
-        arrayOf(VKScope.FRIENDS)
+        arrayOf(VKScope.WALL, VKScope.FRIENDS)
 
+    var userId: Int = 0
 
     private lateinit var arFragment: ArFragment
     private lateinit var fitToScanView: ImageView
@@ -102,8 +109,9 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (!VKSdk.onActivityResult(requestCode, resultCode, data, object : VKCallback<VKAccessToken> {
                 override fun onResult(res: VKAccessToken) {
-                    val request = VKApi.users().get()
 
+
+                    val request = VKApi.users().get()
 
                     request.executeWithListener(object : VKRequestListener() {
                         override fun onComplete(response: VKResponse?) {
@@ -111,16 +119,12 @@ class MainActivity : AppCompatActivity() {
                             val user = (response?.parsedModel as VKList<VKApiUserFull>)[0]
                             val first_name = user.first_name
                             val bdate = user.bdate;
-                        }
-
-                        override fun onError(error: VKError?) {
-                            //Do error stuff
-                        }
-
-                        override fun attemptFailed(request: VKRequest?, attemptNumber: Int, totalAttempts: Int) {
-                            //I don't really believe in progress
+                            userId = user.id;
                         }
                     })
+
+
+
 
                 }
 
@@ -131,6 +135,24 @@ class MainActivity : AppCompatActivity() {
         ) {
             super.onActivityResult(requestCode, resultCode, data)
         }
+    }
+
+    fun makePost(msg: String) {
+        val parameters = VKParameters()
+        parameters[VKApiConst.OWNER_ID] = userId
+        parameters[VKApiConst.MESSAGE] = msg
+        val post = VKApi.wall().post(parameters)
+        post.setModelClass(VKWallPostResult::class.java)
+        post.executeWithListener(object : VKRequestListener() {
+            override fun onComplete(response: VKResponse?) {
+                println("ok")
+                // post was added
+            }
+
+            override fun onError(error: VKError?) {
+                println("error")
+            }
+        })
     }
 
 
