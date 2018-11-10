@@ -22,7 +22,7 @@ private const val TAG = "AugmentedImageFragment"
 private const val MIN_OPENGL_VERSION = 3.0
 private const val USE_SINGLE_IMAGE = true
 private const val SAMPLE_IMAGE_DATABASE = "sample_database.imgdb"
-//const val DEFAULT_IMAGE_NAME = "rahman.jpg"
+const val DEFAULT_IMAGE_NAME = "rahman_ar4.jpg"
 const val DEFAULT_IMAGE_NAME2 = "chaik4.jpg"
 
 class AugmentedImageFragment : ArFragment() {
@@ -85,10 +85,10 @@ class AugmentedImageFragment : ArFragment() {
         // * shorter setup time
         // * doesn't require images to be packaged in apk.
         val augmentedImageDatabase: AugmentedImageDatabase = if (USE_SINGLE_IMAGE) {
-//            val augmentedImageBitmap = loadAugmentedImageBitmap(DEFAULT_IMAGE_NAME, assetManager) ?: return false
+            val augmentedImageBitmap = loadAugmentedImageBitmap(DEFAULT_IMAGE_NAME, assetManager) ?: return false
             val augmentedImageBitmap2 = loadAugmentedImageBitmap(DEFAULT_IMAGE_NAME2, assetManager) ?: return false
             AugmentedImageDatabase(session).apply {
-//                addImage(DEFAULT_IMAGE_NAME, augmentedImageBitmap)
+                addImage(DEFAULT_IMAGE_NAME, augmentedImageBitmap)
                 addImage(DEFAULT_IMAGE_NAME2, augmentedImageBitmap2)
             }
             // If the physical size of the image is known, you can instead use:

@@ -84,12 +84,12 @@ class MainActivity : AppCompatActivity() {
                     // Create a new anchor for newly found images.
                     if (!augmentedImageMap.containsKey(augmentedImage)) {
                         when (augmentedImage.name) {
-//                            DEFAULT_IMAGE_NAME -> {
-//                                val node = AugmentedImageNode(this, R.layout.text_test)
-//                                node.image = augmentedImage
-//                                augmentedImageMap[augmentedImage] = node
-//                                arFragment.arSceneView.scene.addChild(node)
-//                            }
+                            DEFAULT_IMAGE_NAME -> {
+                                val node = AugmentedImageNode(this, R.layout.text_test)
+                                node.image = augmentedImage
+                                augmentedImageMap[augmentedImage] = node
+                                arFragment.arSceneView.scene.addChild(node)
+                            }
                             DEFAULT_IMAGE_NAME2 -> {
                                 val node = AugmentedImageNode(this, R.layout.text_chaykovsky)
                                 node.image = augmentedImage

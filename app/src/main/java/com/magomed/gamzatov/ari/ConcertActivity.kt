@@ -19,7 +19,6 @@ class ConcertActivity : AppCompatActivity() {
             buy.setOnClickListener {
                 openWebPage("https://bigbilet.ru/ticket-sale/ticket?id_service=623789EE7586AA92E0504B5E01F57E37")
             }
-
         } else {
             setContentView(R.layout.concert2)
             val buy = findViewById<Button>(R.id.buy)
@@ -29,7 +28,7 @@ class ConcertActivity : AppCompatActivity() {
         }
     }
 
-    fun openWebPage(url: String) {
+    private fun openWebPage(url: String) {
         try {
             val webpage = Uri.parse(url)
             val myIntent = Intent(Intent.ACTION_VIEW, webpage)
@@ -42,6 +41,5 @@ class ConcertActivity : AppCompatActivity() {
             ).show()
             e.printStackTrace()
         }
-
     }
 }
