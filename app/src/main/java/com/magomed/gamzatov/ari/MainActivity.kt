@@ -121,7 +121,7 @@ class MainActivity : AppCompatActivity() {
                             val bdate = user.bdate;
                             userId = user.id;
 
-                            makePost(":|");
+//                            makePost(":|")
                         }
                     })
 

@@ -23,7 +23,7 @@ private const val MIN_OPENGL_VERSION = 3.0
 private const val USE_SINGLE_IMAGE = true
 private const val SAMPLE_IMAGE_DATABASE = "sample_database.imgdb"
 //const val DEFAULT_IMAGE_NAME = "rahman.jpg"
-const val DEFAULT_IMAGE_NAME2 = "chay.jpg"
+const val DEFAULT_IMAGE_NAME2 = "chaik4.jpg"
 
 class AugmentedImageFragment : ArFragment() {
 
@@ -67,6 +67,7 @@ class AugmentedImageFragment : ArFragment() {
             SnackbarHelper.getInstance()
                 .showError(activity, "Could not setup augmented image database")
         }
+        config.focusMode = Config.FocusMode.AUTO
         return config
     }
 

@@ -54,7 +54,7 @@ class AugmentedImageNode(private val context: Context, layout: Int) : AnchorNode
             node.localPosition = Vector3(pose.tx(), pose.ty(), pose.tz() * image!!.extentZ)
             node.localRotation = Quaternion(pose.qx() - 1f, pose.qy(), pose.qz(), pose.qw())
             val renderable = text?.getNow(null)
-                renderable?.setSizer {
+            renderable?.setSizer {
                     Vector3(image.extentX, image.extentZ / 2.2f, 0f)
             }
             node.renderable = renderable
