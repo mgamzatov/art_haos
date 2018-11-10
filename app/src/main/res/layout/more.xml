@@ -172,6 +172,7 @@
                     android:layout_height="180dp"/>
 
             <ImageView
+                    android:id="@+id/conc2"
                     android:layout_marginStart="10dp"
                     android:src="@drawable/conc22"
                     android:layout_width="180dp"

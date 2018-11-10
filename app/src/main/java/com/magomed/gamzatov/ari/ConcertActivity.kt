@@ -7,6 +7,10 @@ class ConcertActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.concert)
+        if (intent.getIntExtra("index", 1) == 1) {
+            setContentView(R.layout.concert)
+        } else {
+            setContentView(R.layout.concert2)
+        }
     }
 }

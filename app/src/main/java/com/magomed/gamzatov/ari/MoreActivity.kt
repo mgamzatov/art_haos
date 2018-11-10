@@ -34,6 +34,13 @@ class MoreActivity : AppCompatActivity() {
 
         conc1.setOnClickListener {
             val intent = Intent(this, ConcertActivity::class.java)
+            intent.putExtra("index", 1)
+            startActivity(intent, null)
+        }
+
+        conc2.setOnClickListener {
+            val intent = Intent(this, ConcertActivity::class.java)
+            intent.putExtra("index", 2)
             startActivity(intent, null)
         }
     }

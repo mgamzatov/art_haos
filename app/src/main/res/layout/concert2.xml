@@ -25,7 +25,7 @@
                     android:orientation="vertical"
                     android:layout_height="150dp">
                 <TextView
-                        android:text="20"
+                        android:text="11"
                         android:layout_marginTop="5dp"
                         android:textColor="#fff"
                         android:layout_gravity="center"
@@ -34,7 +34,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                 <TextView
-                        android:text="декабря"
+                        android:text="января"
                         android:layout_marginTop="-10dp"
                         android:textColor="#fff"
                         android:layout_gravity="center"
@@ -43,7 +43,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                 <TextView
-                        android:text="Четверг, 19:00"
+                        android:text="Пятница, 19:00"
                         android:layout_marginTop="5dp"
                         android:textColor="#fff"
                         android:textStyle="bold"
@@ -62,10 +62,10 @@
                         android:id="@+id/more_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Сьюита из музыки к балету «Щелкунчик»"
+                        android:text="Балет «Щелкунчик», соч. 71"
                         android:fontFamily="@font/introo"
                         android:textColor="#000"
-                        android:textSize="18sp"
+                        android:textSize="20sp"
                         android:paddingTop="10dp"
                         android:layout_gravity="center"
                 />
@@ -81,7 +81,7 @@
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Большой Зал Консерватории"
+                            android:text="«Филармония-2». Концертный зал имени С. В. Рахманинова"
                             android:textStyle="bold"
                             android:textColor="#000"
                             android:textSize="17sp"
@@ -90,7 +90,7 @@
                 </LinearLayout>
             </LinearLayout>
             <ImageView
-                    android:src="@drawable/concertcover"
+                    android:src="@drawable/concertcover2"
                     android:layout_width="195dp"
                     android:layout_height="195dp"
                     android:layout_alignParentEnd="true"
@@ -138,24 +138,6 @@
         <TextView
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="40dp"
-                android:text="Свиридов"
-                android:fontFamily="@font/introo"
-                android:textSize="19sp"
-                android:textColor="#000"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        <TextView
-                android:layout_marginStart="40dp"
-                android:text="«Метель» - музыкальные иллюстрации к повести Пушкина"
-                android:textSize="18sp"
-                android:textColor="#000"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        <TextView
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="40dp"
                 android:text="П. И. Чайковский"
                 android:fontFamily="@font/introo"
                 android:textSize="19sp"
@@ -165,14 +147,14 @@
 
         <TextView
                 android:layout_marginStart="40dp"
-                android:text="Сюита из музыки б балету «Щелкунчик» для оркестра, соч. 71а"
+                android:text="Балет «Щелкунчик», соч. 71"
                 android:textSize="18sp"
                 android:textColor="#000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
         <TextView
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginStart="10dp"
                 android:text="участники"
                 android:fontFamily="@font/introo"
@@ -188,7 +170,7 @@
         <TextView
                 android:layout_marginTop="5dp"
                 android:layout_marginStart="40dp"
-                android:text="Государственный академический Большой симфонический оркестр имени П. И. Чайкрвского. Дирижер - Владимир Федосеев"
+                android:text="Госоркестр России имени Е. Ф. Светланова. Дирижер - Владимир Юровский"
                 android:textSize="18sp"
                 android:textColor="#000"
                 android:layout_width="wrap_content"
