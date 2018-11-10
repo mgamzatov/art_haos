@@ -8,9 +8,26 @@ import com.google.ar.core.AugmentedImage
 import com.google.ar.core.TrackingState
 import com.google.ar.sceneform.FrameTime
 import com.google.ar.sceneform.ux.ArFragment
+import com.vk.sdk.VKScope
+import com.vk.sdk.VKSdk
 import java.util.*
+import com.vk.sdk.api.VKError
+import com.vk.sdk.VKAccessToken
+import com.vk.sdk.VKCallback
+import android.content.Intent
+import com.vk.sdk.api.VKApi
+import com.vk.sdk.api.VKRequest
+import com.vk.sdk.api.VKResponse
+import com.vk.sdk.api.VKRequest.VKRequestListener
+import com.vk.sdk.api.model.*
+
 
 class MainActivity : AppCompatActivity() {
+
+    private val sMyScope =
+//        arrayOf(VKScope.FRIENDS, VKScope.WALL, VKScope.PHOTOS, VKScope.NOHTTPS, VKScope.MESSAGES, VKScope.DOCS)
+        arrayOf(VKScope.FRIENDS)
+
 
     private lateinit var arFragment: ArFragment
     private lateinit var fitToScanView: ImageView
@@ -24,6 +41,8 @@ class MainActivity : AppCompatActivity() {
         fitToScanView = findViewById(R.id.image_view_fit_to_scan)
 
         arFragment.arSceneView.scene.addOnUpdateListener(this::onUpdateFrame)
+
+        VKSdk.login(this, *sMyScope)
     }
 
     override fun onResume() {
@@ -78,4 +97,41 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (!VKSdk.onActivityResult(requestCode, resultCode, data, object : VKCallback<VKAccessToken> {
+                override fun onResult(res: VKAccessToken) {
+                    val request = VKApi.users().get()
+
+
+                    request.executeWithListener(object : VKRequestListener() {
+                        override fun onComplete(response: VKResponse?) {
+
+                            val user = (response?.parsedModel as VKList<VKApiUserFull>)[0]
+                            val first_name = user.first_name
+                            val bdate = user.bdate;
+                        }
+
+                        override fun onError(error: VKError?) {
+                            //Do error stuff
+                        }
+
+                        override fun attemptFailed(request: VKRequest?, attemptNumber: Int, totalAttempts: Int) {
+                            //I don't really believe in progress
+                        }
+                    })
+
+                }
+
+                override fun onError(error: VKError) {
+                    println("error")
+                }
+            })
+        ) {
+            super.onActivityResult(requestCode, resultCode, data)
+        }
+    }
+
+
 }
