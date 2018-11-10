@@ -45,11 +45,8 @@
             android:padding="6dp"
             android:fontFamily="@font/introo"
             android:layout_gravity="center"
-            android:textSize="17sp"
-            android:text="«...Яркий представитель романтизма...»
-«...Яркий представитель романтизма...»
-«...Яркий представитель романтизма...»
-«...Яркий представитель романтизма...»"
+            android:textSize="16sp"
+            android:text="@string/info_text"
             android:textAlignment="center"
     />
 
@@ -113,7 +110,7 @@
                     android:layout_marginStart="9dp"
                     android:fontFamily="@font/introo"
                     android:textSize="18sp"
-                    android:text="симфония 2"
+                    android:text="симфония 6"
                     android:textColor="#FFF"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -135,7 +132,7 @@
                     android:layout_marginStart="9dp"
                     android:fontFamily="@font/introo"
                     android:textSize="18sp"
-                    android:text="симфония 3"
+                    android:text="симфония 4"
                     android:textColor="#FFF"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
