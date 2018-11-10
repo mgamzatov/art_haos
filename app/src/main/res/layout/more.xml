@@ -80,6 +80,7 @@
                 android:orientation="horizontal"
         >
             <ImageButton
+                    android:id="@+id/play_button"
                     android:background="@drawable/ic_play_circle"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -90,7 +91,7 @@
                     android:layout_marginStart="9dp"
                     android:fontFamily="@font/introo"
                     android:textSize="18sp"
-                    android:text="симфония 1"
+                    android:text="лебединое озеро"
                     android:textColor="#FFF"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
