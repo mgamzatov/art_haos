@@ -190,6 +190,7 @@
         />
 
         <Button
+                android:id="@+id/friends"
                 android:text="позвать друзей"
                 android:layout_width="320dp"
                 android:layout_height="96dp"

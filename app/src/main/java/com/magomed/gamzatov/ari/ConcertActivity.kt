@@ -7,9 +7,13 @@ import android.widget.Toast
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
+import com.magomed.gamzatov.ari.MainActivity.Companion.userId
+import com.vk.sdk.api.*
+import com.vk.sdk.api.model.VKWallPostResult
 
 
 class ConcertActivity : AppCompatActivity() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,13 +23,47 @@ class ConcertActivity : AppCompatActivity() {
             buy.setOnClickListener {
                 openWebPage("https://bigbilet.ru/ticket-sale/ticket?id_service=623789EE7586AA92E0504B5E01F57E37")
             }
+
+
+            val friends = findViewById<Button>(R.id.friends)
+            friends.setOnClickListener {
+//                makePost("vk_hackathon. Приглашаю посетить концерт сьюита из музыки к балету "Щелкунчик"");
+                makePost("test");
+            }
+
         } else {
             setContentView(R.layout.concert2)
             val buy = findViewById<Button>(R.id.buy)
             buy.setOnClickListener {
                 openWebPage("https://bigbilet.ru/ticket-sale/ticket?id_service=6397C256328FABEBE0504B5E01F56715")
             }
+
+            val friends = findViewById<Button>(R.id.friends)
+            friends.setOnClickListener {
+                //                makePost("vk_hackathon. Приглашаю посетить балет "Щелкунчик" соч. 71");
+                makePost("test");
+            }
         }
+    }
+
+    fun makePost(msg: String) {
+
+        val activity = this;
+
+        val parameters = VKParameters()
+        parameters[VKApiConst.OWNER_ID] = userId
+        parameters[VKApiConst.MESSAGE] = msg
+        val post = VKApi.wall().post(parameters)
+        post.setModelClass(VKWallPostResult::class.java)
+        post.executeWithListener(object : VKRequest.VKRequestListener() {
+            override fun onComplete(response: VKResponse?) {
+                SnackbarHelper.getInstance().showMessage(activity, "Пост опубликован")
+            }
+
+            override fun onError(error: VKError?) {
+                SnackbarHelper.getInstance().showMessage(activity, "Oops...Какой хакатон без ошибок?")
+            }
+        })
     }
 
     private fun openWebPage(url: String) {

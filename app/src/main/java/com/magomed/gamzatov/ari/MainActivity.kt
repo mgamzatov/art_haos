@@ -34,7 +34,11 @@ class MainActivity : AppCompatActivity() {
 //        arrayOf(VKScope.FRIENDS, VKScope.WALL, VKScope.PHOTOS, VKScope.NOHTTPS, VKScope.MESSAGES, VKScope.DOCS)
         arrayOf(VKScope.WALL, VKScope.FRIENDS)
 
-    var userId: Int = 0
+
+    companion object {
+        var userId: Int = 0
+    }
+
 
     private lateinit var arFragment: ArFragment
     private lateinit var fitToScanView: ImageView
@@ -139,23 +143,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun makePost(msg: String) {
-        val parameters = VKParameters()
-        parameters[VKApiConst.OWNER_ID] = userId
-        parameters[VKApiConst.MESSAGE] = msg
-        val post = VKApi.wall().post(parameters)
-        post.setModelClass(VKWallPostResult::class.java)
-        post.executeWithListener(object : VKRequestListener() {
-            override fun onComplete(response: VKResponse?) {
-                println("ok")
-                // post was added
-            }
-
-            override fun onError(error: VKError?) {
-                println("error")
-            }
-        })
-    }
 
 
 }
