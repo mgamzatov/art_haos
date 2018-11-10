@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="true"
+        android:background="#fff"
+        tools:context=".MoreActivity"
+        android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/more_text"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Петр Ильич Чайковский"
+            android:fontFamily="@font/introo"
+            android:textColor="#000"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:paddingTop="10dp"
+            android:background="@drawable/top"
+            android:layout_gravity="center"
+    />
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/chaykrug"
+    />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:textColor="#000"
+            android:padding="6dp"
+            android:fontFamily="@font/introo"
+            android:layout_gravity="center"
+            android:textSize="17sp"
+            android:text="«...Яркий представитель романтизма...»
+«...Яркий представитель романтизма...»
+«...Яркий представитель романтизма...»
+«...Яркий представитель романтизма...»"
+            android:textAlignment="center"
+    />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="известные композиции"
+            android:fontFamily="@font/introo"
+            android:textColor="#000"
+            android:textAlignment="center"
+            android:textSize="23sp"
+            android:paddingTop="10dp"
+            android:layout_gravity="center"
+    />
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="388dp"
+                android:src="@drawable/piano"
+        />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+        >
+            <ImageButton
+                    android:background="@drawable/ic_play_circle"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="72dp"
+                    android:layout_marginStart="9dp"/>
+            <TextView
+                    android:layout_marginTop="86dp"
+                    android:layout_marginStart="9dp"
+                    android:fontFamily="@font/introo"
+                    android:textSize="18sp"
+                    android:text="симфония 1"
+                    android:textColor="#FFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+        >
+            <ImageButton
+                    android:background="@drawable/ic_play_circle"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="160dp"
+                    android:layout_marginStart="9dp"/>
+            <TextView
+                    android:layout_marginTop="173dp"
+                    android:layout_marginStart="9dp"
+                    android:fontFamily="@font/introo"
+                    android:textSize="18sp"
+                    android:text="симфония 2"
+                    android:textColor="#FFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+        >
+            <ImageButton
+                    android:background="@drawable/ic_play_circle"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="250dp"
+                    android:layout_marginStart="9dp"/>
+            <TextView
+                    android:layout_marginTop="264dp"
+                    android:layout_marginStart="9dp"
+                    android:fontFamily="@font/introo"
+                    android:textSize="18sp"
+                    android:text="симфония 3"
+                    android:textColor="#FFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <Button
+            android:text="Купить билет"
+            android:layout_width="320dp"
+            android:layout_height="89dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/introo"
+            android:paddingBottom="6dp"
+            android:background="@drawable/button2"
+            android:layout_marginBottom="50dp"
+    />
+</LinearLayout>
+</ScrollView>

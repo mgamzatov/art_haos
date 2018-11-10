@@ -3,10 +3,13 @@
           package="com.magomed.gamzatov.ari">
 
     <uses-permission android:name="android.permission.CAMERA"/>
-    <!-- This tag indicates that this application requires ARCore.  This results in the application
-         only being visible in the Google Play Store on devices that support ARCore. -->
-    <uses-feature android:name="android.hardware.camera.ar" android:required="true"/>
-
+    <!--
+         This tag indicates that this application requires ARCore.  This results in the application
+         only being visible in the Google Play Store on devices that support ARCore.
+    -->
+    <uses-feature
+            android:name="android.hardware.camera.ar"
+            android:required="true"/>
 
     <application
             android:allowBackup="true"
@@ -23,7 +26,12 @@
             </intent-filter>
         </activity>
 
-        <meta-data android:name="com.google.ar.core" android:value="required" />
+        <meta-data
+                android:name="com.google.ar.core"
+                android:value="required"/>
+
+        <activity android:name=".MoreActivity">
+        </activity>
     </application>
 
 </manifest>

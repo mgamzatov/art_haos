@@ -1,36 +1,31 @@
 package com.magomed.gamzatov.ari
 
 import android.content.Context
-import android.net.Uri
+import android.content.Intent
+import android.support.v4.content.ContextCompat.startActivity
 import android.util.Log
+import android.widget.Button
 import com.google.ar.core.AugmentedImage
+import com.google.ar.core.Pose
 import com.google.ar.sceneform.AnchorNode
 import com.google.ar.sceneform.Node
-import com.google.ar.sceneform.math.Vector3
-import com.google.ar.sceneform.rendering.ModelRenderable
-import java.util.concurrent.CompletableFuture
 import com.google.ar.sceneform.math.Quaternion
-import com.google.ar.core.Pose
+import com.google.ar.sceneform.math.Vector3
 import com.google.ar.sceneform.rendering.ViewRenderable
+import java.util.concurrent.CompletableFuture
 
 private const val TAG = "AugmentedImageNode"
 
-class AugmentedImageNode(context: Context, layout: Int) : AnchorNode() {
+class AugmentedImageNode(private val context: Context, layout: Int) : AnchorNode() {
 
     // The augmented image represented by this node.
-//    private var wolf: CompletableFuture<ModelRenderable>? = null
     private var text: CompletableFuture<ViewRenderable>? = null
 
     init {
-//        if (wolf == null) {
-//            wolf = ModelRenderable.builder()
-//                .setSource(context, Uri.parse("Wolf.sfb"))
-//                .build()
-//        }
         if (text == null) {
             text = ViewRenderable.builder()
                 .setView(context, layout)
-                .setSizer { Vector3(0.1f, 0.05f, 0.0f) }
+                .setSizer { Vector3(0.07f, 0.06f, 0.0f) }
                 .build()
         }
     }
@@ -53,11 +48,24 @@ class AugmentedImageNode(context: Context, layout: Int) : AnchorNode() {
 
             // Make the 4 corner nodes.
             val node = Node()
-            val pose = Pose.makeTranslation(0.0f, 0.0f, 0.0f)
+            val pose = Pose.makeTranslation(0.0f, 0.0f, 0.5f)
 
             node.setParent(this)
-            node.localPosition = Vector3(pose.tx(), pose.ty(), pose.tz() + 0.05f)
+            node.localPosition = Vector3(pose.tx(), pose.ty(), pose.tz() * image!!.extentZ)
             node.localRotation = Quaternion(pose.qx() - 1f, pose.qy(), pose.qz(), pose.qw())
-            node.renderable = text?.getNow(null)
+            val renderable = text?.getNow(null)
+                renderable?.setSizer {
+                    Vector3(image.extentX, image.extentZ / 2.2f, 0f)
+            }
+            node.renderable = renderable
+
+            val view = renderable?.view
+            val moreButton = view?.findViewById<Button>(R.id.more_button)
+            moreButton?.setOnClickListener {
+                Log.e(TAG, "Click!!!!!!!!!!!!!!!!!!!!!")
+                val intent = Intent(context, MoreActivity::class.java)
+                intent.putExtra("who", "Чайковский")
+                startActivity(context, intent, null)
+            }
        }
 }
