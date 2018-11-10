@@ -31,8 +31,8 @@ class MoreActivity : AppCompatActivity() {
         }
     }
 
-    override fun onDestroy () {
-        super.onDestroy ()
-        mp.release ()
+    override fun onDestroy() {
+        super.onDestroy()
+        mp.release()
     }
 }
