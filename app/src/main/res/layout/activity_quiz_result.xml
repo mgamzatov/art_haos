@@ -20,14 +20,16 @@
             android:textColor="#000"
             android:background="@drawable/top"
             android:paddingTop="10dp"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:layout_gravity="center"
+            android:textAlignment="center"
             android:fontFamily="@font/introo"/>
 
     <TextView
             android:id="@+id/quizResultLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#000"
             android:text="3 / 5"
             android:textSize="30sp"
             android:layout_marginTop="60dp"
@@ -39,17 +41,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Неплохо!"
+            android:textColor="#000"
             android:textSize="20sp"
             android:layout_marginTop="60dp"
             android:layout_gravity="center"
             android:fontFamily="@font/introo"/>
 
     <Button
-            android:layout_width="140dp"
-            android:layout_height="50dp"
+            android:layout_width="160dp"
+            android:layout_height="70dp"
             android:text="Спасибо!"
-            android:textSize="18sp"
-            android:layout_marginTop="80dp"
+            android:textSize="20sp"
+            android:layout_marginTop="30dp"
             android:onClick="returnTop"
             android:layout_gravity="center"
             android:background="@drawable/buttonback"

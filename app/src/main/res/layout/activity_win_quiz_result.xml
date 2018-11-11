@@ -20,14 +20,16 @@
             android:textColor="#000"
             android:background="@drawable/top"
             android:paddingTop="10dp"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:layout_gravity="center"
+            android:textAlignment="center"
             android:fontFamily="@font/introo"/>
 
     <TextView
             android:id="@+id/winQuizResultLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#000"
             android:text="5 / 5"
             android:textSize="30sp"
             android:layout_marginTop="60dp"
@@ -47,27 +49,38 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Отлично!\nТы заслужил отведать бесплатную кружку ароматного кофе в антракте!"
-            android:textSize="15sp"
+            android:textColor="#000"
+            android:text="Отлично!"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/introo"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:text="Ты заслужил отведать бесплатную кружку ароматного кофе во время антракта!"
+            android:textSize="17sp"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:fontFamily="@font/introo"/>
 
     <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:textSize="18sp"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:src="@drawable/qr"
             android:fontFamily="@font/introo"/>
 
     <Button
-            android:layout_width="140dp"
-            android:layout_height="50dp"
+            android:layout_width="160dp"
+            android:layout_height="70dp"
             android:text="Спасибо!"
-            android:textSize="18sp"
-            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
             android:onClick="winReturnTop"
             android:layout_gravity="center"
             android:background="@drawable/buttonback"

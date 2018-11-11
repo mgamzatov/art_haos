@@ -42,12 +42,39 @@
             android:gravity="center"
             android:orientation="vertical"
             android:textColor="#000"
+            android:fontFamily="@font/introo"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:text="1840-1893"
+            android:textAlignment="center"
+    />
+
+    <TextView
+            android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:textColor="#000"
             android:padding="6dp"
             android:fontFamily="@font/introo"
             android:layout_gravity="center"
+            android:textSize="18sp"
+            android:text="Представитель романтизма"
+            android:textAlignment="center"
+    />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:textColor="#000"
+            android:padding="6dp"
+            android:fontFamily="@font/introo"
+            android:layout_gravity="start"
             android:textSize="16sp"
             android:text="@string/info_text"
-            android:textAlignment="center"
+            android:textAlignment="textStart"
     />
 
     <TextView
@@ -191,8 +218,9 @@
             android:id="@+id/quizBtn"
             android:layout_marginTop="20dp"
             android:text="выйграй приз!"
-            android:layout_width="320dp"
-            android:layout_height="89dp"
+            android:layout_width="500dp"
+            android:layout_height="100dp"
+            android:textSize="23sp"
             android:layout_gravity="center"
             android:fontFamily="@font/introo"
             android:paddingBottom="6dp"

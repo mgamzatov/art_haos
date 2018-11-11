@@ -33,7 +33,7 @@
             android:fontFamily="@font/introo"
             android:layout_gravity="center"
             android:textSize="17sp"
-            android:text="«...Яркий представитель романтизма...»"
+            android:text="«Кем он ещё был по профессии?»"
             android:textAlignment="center"
     />
 
@@ -41,7 +41,7 @@
             android:id="@+id/more_button"
             android:layout_width="193dp"
             android:layout_gravity="center"
-            android:text="Узнать больше"
+            android:text="Узнать"
             android:fontFamily="@font/introo"
             android:background="@drawable/buttonback"
             android:layout_height="59dp"
