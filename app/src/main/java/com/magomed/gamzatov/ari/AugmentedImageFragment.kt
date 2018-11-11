@@ -23,7 +23,7 @@ private const val MIN_OPENGL_VERSION = 3.0
 private const val USE_SINGLE_IMAGE = true
 private const val SAMPLE_IMAGE_DATABASE = "sample_database.imgdb"
 const val DEFAULT_IMAGE_NAME = "rahman_ar4.jpg"
-const val DEFAULT_IMAGE_NAME2 = "chaik4.jpg"
+const val DEFAULT_IMAGE_NAME2 = "chay.jpg"
 
 class AugmentedImageFragment : ArFragment() {
 
